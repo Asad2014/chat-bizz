@@ -32,7 +32,7 @@ import { signOut } from "firebase/auth";
 import { auth } from "@/firebaseConfig";
 import { useRouter } from "next/navigation";
 
-export default function LogoutButton() {
+export default function LogoutPage() {
   const router = useRouter();
 
   const handleLogout = async () => {
@@ -49,12 +49,13 @@ export default function LogoutButton() {
   };
 
   return (
-    <button
-      onClick={handleLogout}
-      className="px-6 py-3 bg-red-500 text-white font-semibold rounded-lg hover:bg-red-600 transition"
-    >
-      Logout
-    </button>
+    <div className="flex items-center justify-center min-h-screen">
+      <button
+        onClick={handleLogout}
+        className="px-6 py-3 bg-red-500 text-white font-semibold rounded-lg hover:bg-red-600 transition"
+      >
+        Logout
+      </button>
+    </div>
   );
 }
-
