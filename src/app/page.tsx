@@ -1,11 +1,16 @@
-import React from 'react'
+"use client";
+import React from 'react';
+import Hero from '../app/components/Hero';
 
-const page = () => {
+
+export default function Home() {
+  
   return (
-    <div>
-      
-    </div>
-  )
-}
+    
+       <div>
+        <Hero />
 
-export default page
+       </div>
+    
+  );
+}
