@@ -26,7 +26,6 @@
 // }
 
 
-
 "use client";
 import { signOut } from "firebase/auth";
 import { auth } from "@/firebaseConfig";
@@ -38,21 +37,17 @@ export default function LogoutPage() {
   const handleLogout = async () => {
     try {
       await signOut(auth);
-      router.push("/signin");
+      router.replace("/signin"); // replace() prevents back navigation
     } catch (error) {
-      if (error instanceof Error) {
-        console.error("Logout Error:", error.message);
-      } else {
-        console.error("An unknown error occurred during logout.");
-      }
+      console.error("Logout Error:", error instanceof Error ? error.message : "An unknown error occurred");
     }
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen">
+    <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <button
         onClick={handleLogout}
-        className="px-6 py-3 bg-red-500 text-white font-semibold rounded-lg hover:bg-red-600 transition"
+        className="px-6 py-3 bg-red-500 text-white font-semibold rounded-lg hover:bg-red-600 transition duration-300"
       >
         Logout
       </button>
