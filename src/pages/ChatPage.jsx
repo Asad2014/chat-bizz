@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import SideDrawer from "../components/miscellanous/SideDrawer";
-import MyChats from "../components/miscellanous/MyChats";
+import SideDrawer from "../components/miscellaneous/SideDrawer";
+import MyChats from "../components/miscellaneous/MyChats";
 import ChatBox from "../components/miscellaneous/ChatBox";
 import { chatState } from "../context/ChatProvider";
 
