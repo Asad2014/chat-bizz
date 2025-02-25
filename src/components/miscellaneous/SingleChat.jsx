@@ -2,14 +2,14 @@
 import { useContext, useEffect, useState } from "react";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { IoSend } from "react-icons/io5";
-import UpdateGroupChatModal from "./UpdateGroupChatModal";
+import UpdateGroupChatModal from "./UpdateGroupChatModal.jsx";
 import axios from "axios";
 import { toast } from "react-toastify";
-import ScrollAbleChat from "./ScrollAbleChat";
+import ScrollAbleChat from "./ScrollAbleChat.jsx";
 import { io } from "socket.io-client";
-import { chatState } from "../../context/ChatProvider";
-import UserProfileModal from "./UserProfileModal.JSX";
-import { getSender, getSenderFull } from "../../config/ChatLogics";
+import { chatState } from "../../context/ChatProvider.jsx";
+import UserProfileModal from "./UserProfileModal.jsx";
+import { getSender, getSenderFull } from "../../config/ChatLogics.jsx";
 
 const ENDPOINT = "https://chatapp-production-31d4.up.railway.app";
 var socket, selectedChatCompare;
